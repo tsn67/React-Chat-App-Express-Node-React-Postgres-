@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jura:wght@300..700&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Jura";
+}
+
+body {
+    background: #0A211D;
+}
+
+#root {
+    width: 100%;
+    background: #0A211D;
+    display: flex;
+    justify-content: center;
+}
+
+.entry-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.entry-container > h3 {
+    color: white;
+    margin: 40px;
+    font-size: 1.6rem;
+}
+
+.profile {
+    width: 350px;
+    height: 50px;
+    background: white;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.profile > h3 {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.entry-container > button {
+    border: none;
+    border-radius: 5px;
+    width: 350px;
+    height: 50px;
+    font-size: 1.4rem;
+    background: #009990;
+    color: white;
+    font-weight: bold;
+}
+
+.entry-container > button:hover {
+    background: #016e67;
+    outline: solid white 2px;
+}
+
+
+.entry-container > input {
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    padding-inline: 10px;
+    width: 350px;
+    height: 40px;
+}
+
+
+.occupied {
+    background: lightgrey;
+}
+
+.profile:hover {
+    cursor: pointer;
+    outline: solid white 2px;
+}
+
+
+h4 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: rgb(51, 218, 129);
+}

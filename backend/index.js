@@ -25,3 +25,24 @@ const io = new socketIo(server, {
 server.listen(port, ()=> {
     console.log("server started at port:"+port);
 })
+
+var clients = []; //array to keep track of all connected users
+
+io.on('connection', (socket) => {
+    console.log('user connected:', socket.id);
+    clients.push(socket);
+
+    io.emit('current-count', {
+        count: clients.length
+    });
+
+    socket.on('disconnect', () => {
+        let index = clients.indexOf(socket);
+        clients.splice(index, 1);
+        console.log('User disconnected:', socket.id);
+
+        io.emit('current-count', {
+            count: clients.length
+        });
+    });
+});
